@@ -38,9 +38,34 @@
 			height: 100%;
 			width: 100%;
 		}
-		.iframe-container {
-			width: 95%;
-			height: 100%; /* Set to viewport height */
+		.erdtitle-container{
+			width: 85%;
+			height: 0; /* Set to viewport height */
+			margin-bottom: -15px;
+			padding: 20px;
+			border: none;
+		}
+		.erdtitle-container h3 {
+			font-size: 22px;
+		}
+		}
+		.erd-container {
+			width: 85%;
+			height: auto;
+/*			margin-top: 10px;*/
+			overflow: hidden;
+		}
+
+		.erd-container img {
+			width: 85%;
+			height: auto;
+			display: block;
+			padding: 20px;
+			margin-top: 50px;
+		}
+		.iframe-container2 {
+			width: 85%;
+			height: 100vh; /* Set to viewport height */
 			margin-top: 10px;
 			overflow: auto;
 			display: block;
@@ -49,7 +74,16 @@
 			padding: 20px;
 			border: none;
 		}
-		
+		.sqlcode-container{
+			width: 85%;
+			height: 0; /* Set to viewport height */
+			margin-bottom: 15px;
+			padding: 20px;
+			border: none;
+		}
+		.sqlcode-container h3 {
+			font-size: 22px;
+		}
 	
 	</style>
 	
@@ -59,9 +93,21 @@
 		<a href="HomePage.html" class="homepage_button">Home Page</a>
 			<h1>SQL Server Database for Chase Center Stadium</h1>
 				<h3>The company that this database is designed for is GSW Arena, LLC. This company owns the Golden State Warriors Stadium known as 		“Chase Center” in San Francisco, California. This stadium operates year-round primarily acting as a home stadium for the Golden 	State Warriors basketball team. The purpose of this creating this database is to ensure that GSW Arena LLC can easily access data 	  relevant to analyzing, maintaining, and improving their overall stadium operations to ensure that maximum profit is being achieved
-</h3>
+				</h3>
 	</div>
-		<iframe src="ChaseCenterSQL_Markdown.html" class="iframe-container" scrolling="yes"></iframe>
+	
+	<div class="erdtitle-container"><br>
+		<h3>Chase Center Database ERD Diagram</h3>
+	</div>
+	
+	<div class="erd-container">
+		<img src="ChaseCenter_ERD.jpeg">
+	<div class="sqlcode-container">
+		<h3>SQL Code to Create Database, Views, Functions, and Stored Procedures</h3>	
+	</div>
+	</div>
+		<iframe src="ChaseCenterSQL_Markdown.html" class="iframe-container2" scrolling="yes"></iframe>
+
 	
 </body>
 	
