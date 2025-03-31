@@ -1,19 +1,10 @@
 # Roshan's Project Portfolio
 
-This repository hosts the source code for my personal portfolio website. The website is deployed on GitHub Pages and serves as a showcase for my projects, academic achievements, and professional work.
+This repository hosts the source code for my personal portfolio website. The website is deployed on GitHub Pages and serves as a showcase for projects I have completed.
 
 ## Live Demo
 [View the Live Website](https://roshancl415.github.io/project-portfolio/HomePage.html)
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
 
 ## Introduction
 This portfolio website is designed to highlight my academic background and professional projects, including:
@@ -30,14 +21,6 @@ The website is built with a focus on clear presentation and ease of navigation, 
 - **Future Enhancements**: Additional projects and updates will be added over time.
 
 ## Technologies Used
-- **HTML5**: Provides the structure for the website.
-- **CSS3**: Used for styling and layout.
-- **JavaScript**: Adds interactivity (if applicable).
+- **HTML**: Provides the structure for the website.
+- **CSS**: Used for styling and layout.
 - **GitHub Pages**: Hosting and deployment platform.
-
-## Installation
-To run the project locally, follow these steps:
-
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/roshancl415/project-portfolio.git
