@@ -1,6 +1,6 @@
 # Roshan's Project Portfolio
 
-This repository hosts the source code for my personal portfolio website. The website is deployed on GitHub Pages and serves as a showcase for projects I have completed.
+This repository hosts the source code for my personal portfolio website. The website is deployed on GitHub Pages and serves as a showcase for the projects I have completed.
 
 ## Live Demo
 [View the Live Website](https://roshancl415.github.io/project-portfolio/HomePage.html)
