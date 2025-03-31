@@ -157,9 +157,28 @@
     .moretocome {
       position: absolute;
       left: 40px;
-      top: 1350px;
+      top: 1300px;
       padding: 50px;
     }
+	  
+	.homepage_button {
+				display: inline-block;
+				background-color: #505050;
+				color: white;
+				text-decoration: none;
+				border-radius: 5px;
+				font-size: 16px;
+				transition: border 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+				position: absolute;
+			    left: 90px;
+			    top: 1350px;
+			    padding: 15px;
+			}
+		.homepage_button:hover {
+				border: 2px solid red; /* Adds a red border on hover */
+				box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); /* Adds a shadow effect */
+				background-color: #505050; /* Maintain original background color */
+			}
     
     /* New caption styling for the sentiment analysis section */
     .fantasy {
@@ -222,7 +241,8 @@
     <img src="https://media.cnn.com/api/v1/images/stellar/prod/130214161738-01-michael-jordan.jpg?q=w_3072,h_1728,x_0,y_0,c_fill" class="moviecleaning">
   </a>
   
-  <h4 class="moretocome">More to Come...</h4>
-  
+
+	<a href="https://github.com/roshancl415/project-portfolio" class="homepage_button">Website Source Code</a>
+  	<h4 class="moretocome"></h4>
 </body>
 </html>
