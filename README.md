@@ -9,10 +9,10 @@ This repository hosts the source code for my personal portfolio website. The web
 ## Introduction
 This portfolio website is designed to highlight my professional projects, including:
 - *WorldFitness Gym Database Creation*
-- *NBA Winning Stats Analysis*
 - *Creating the Optimal Fantasy Football Lineup*
-- *Credit Card Spending Analysis*
 - *NBA Referee Foul Tendencies*
+- *NBA Winning Stats Analysis*
+- *Credit Card Spending Analysis*
 
 The website is built with a focus on clean presentation and ease of navigation.
 
