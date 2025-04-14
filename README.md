@@ -11,7 +11,7 @@ This portfolio website is designed to highlight my professional projects, includ
 - *WorldFitness Gym Database Creation*
 - *NBA Winning Stats Analysis*
 - *Creating the Optimal Fantasy Football Lineup*
-- *Credit Card Spending Analysis* (featuring a Tableau and Excel dashboard)
+- *Credit Card Spending Analysis*
 - *NBA Referee Foul Tendencies*
 
 The website is built with a focus on clean presentation and ease of navigation.
