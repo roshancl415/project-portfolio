@@ -5,19 +5,19 @@
   
   <style>
     h1 {
-      color: black;
+      color: white;
       position: absolute;
       left: 90px;
       top: 10px;
     }
     h2 {
-      color: crimson;
+      color: white;
       position: absolute;
       left: 90px;
       top: 65px;
     }
     h3 {
-      color: black;
+      color: white;
       position: absolute;
       left: 90px;
       top: 97px;
@@ -136,21 +136,20 @@
     }
     
     .topleft_rectangle {
-      border: 3px solid black;
-      width: 555px;
-      height: 155px;
-      position: absolute;
-      left: 70px;
-      top: 15px;
-      background-color: transparent;
-      border-radius: 0px;
-    }
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;        /* stretch full-width */
+	  height: 90px;      /* adjust to cover all three headings */
+	  background-color: #1C1C1C;
+	  z-index: -1;       /* ensure it sits on top */
+}
     .linkedin {
       position: absolute;
-      left: 525px;
-      top: 85px;
-      width: 75px;
-      height: 75px;
+      left: 1000px;
+      top: 20px;
+      width: 55px;
+      height: 55px;
       transition: border 0.3s ease;
       z-index: +1;
     }
@@ -192,6 +191,10 @@
       padding: 0px;
       box-sizing: border-box;
     }
+		.content-container {
+	  position: relative;
+	  top: -125px;    /* <- lifts everything inside up by 20px */
+	}
 	body {
     font-family: 'Arial', sans-serif;
   }
@@ -199,50 +202,39 @@
   
 <body>
 
-  <h1>Roshan Cranford Luitel's Portfolio</h1>
-  <h2>University of Denver</h2>
-  <h3>BSBA, Business Analytics<br>Minor in Finance</h3>
-  
-  <h4 class="project1">WorldFitness Gym Database</h4>
-  <h4 class="project4">Which stats contribute the most to <br> winning in the NBA?</h4>
-  <h4 class="project3">Credit Card Spending Analysis <br>(Tableau + Excel Dashboard)</h4>
-  <h4 class="project2">NBA Referee Foul Tendencies</h4>
-  <h4 class="fantasy">
-    How do you create the optimal fantasy football lineup?
-  </h4>
-  
-  <a href="CC-Spending-Dashboard.html">
-    <img src="https://cdn.britannica.com/54/237654-050-9DD5E536/Macro-image-of-all-major-credit-card-companies.jpg" class="chasecenter">
-  </a>
-	
-<!--	https://cdn.nba.com/teams/uploads/sites/1610612744/2024/08/New-Web-Hero-Our-Vision-in-About-Us.jpg-->
-  
-
-  
-  <a href="optimal-fantasy.html">
-    <img src="https://mrhsnews.com/wp-content/uploads/2023/10/DSb9bCBnrhYxQwgQezU3KdPtGZe34KkLpGqLcZWX-1.png" class="fantasy_photo">
-  </a>
-  
-  <a href="nba-referee-tendancies.html">
-    <img src="LukaRef.jpeg" class="nba">
-  </a>
-  
-  <a href="https://www.linkedin.com/in/roshancranfordluitel/">
+  <h1>Roshan Cranford Luitel</h1>
+	<div class="topleft_rectangle"></div>
+	<a href="https://www.linkedin.com/in/roshancranfordluitel/">
     <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" class="linkedin">
   </a>
-  
-  <div class="topleft_rectangle"></div>
-  
-  <a href="SQLServer-Database.html">
-    <img src="WorldFitnessLogo.jpeg" class="creditcard">
-  </a>
-  
-  <a href="DataMining-WinPrediction.html">
-    <img src="https://media.cnn.com/api/v1/images/stellar/prod/130214161738-01-michael-jordan.jpg?q=w_3072,h_1728,x_0,y_0,c_fill" class="moviecleaning">
-  </a>
-  
+##########
+	<div class="content-container">
+    <h4 class="project1">WorldFitness Gym Database</h4>
+    <h4 class="project4">Which stats contribute the most to <br> winning in the NBA?</h4>
+    <h4 class="project3">Credit Card Spending Analysis <br>(Tableau + Excel Dashboard)</h4>
+    <h4 class="project2">NBA Referee Foul Tendencies</h4>
+    <h4 class="fantasy">
+      How do you create the optimal fantasy football lineup?
+    </h4>
 
-	<a href="https://github.com/roshancl415/project-portfolio" class="homepage_button">Website Source Code</a>
-  	<h4 class="moretocome"></h4>
+    <a href="CC-Spending-Dashboard.html">
+      <img src="https://cdn.britannica.com/54/237654-050-9DD5E536/Macro-image-of-all-major-credit-card-companies.jpg" class="chasecenter">
+    </a>
+    <a href="optimal-fantasy.html">
+      <img src="https://mrhsnews.com/wp-content/uploads/2023/10/DSb9bCBnrhYxQwgQezU3KdPtGZe34KkLpGqLcZWX-1.png" class="fantasy_photo">
+    </a>
+    <a href="nba-referee-tendancies.html">
+      <img src="LukaRef.jpeg" class="nba">
+    </a>
+    <a href="SQLServer-Database.html">
+      <img src="WorldFitnessLogo.jpeg" class="creditcard">
+    </a>
+    <a href="DataMining-WinPrediction.html">
+      <img src="https://media.cnn.com/api/v1/images/stellar/prod/130214161738-01-michael-jordan.jpg?q=w_3072,h_1728,x_0,y_0,c_fill" class="moviecleaning">
+    </a>
+    <a href="https://github.com/roshancl415/project-portfolio"
+       class="homepage_button">Website Source Code</a>
+    <h4 class="moretocome"></h4>
+  </div>
 </body>
 </html>
