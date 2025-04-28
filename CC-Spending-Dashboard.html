@@ -1,121 +1,175 @@
 <!doctype html>
-<html>
-	<meta charset="UTF-8">	
-	<title>CC Spending Dashboard</title>
-	
-	
-	<style>
-		
-		.toptextcontainer{
-			width:95%;
-			padding:20px;
-		}
-		.toptextcontainer h1{
-			margin-top: 50px;
-		}
-		.lowertextcontainer{
-			width:95%;
-			padding:20px;
-		}
-		.tableautextcontainer{
-			width:95%;
-			padding:20px;
-		}
-		.tableaucontainer{
-			margin-top: -100px;
-			width:95%;
-			padding:20px;
-		}
-		.exceltextcontainer{
-			margin-top: 70px;
-			width:95%;
-			padding:20px;
-		}
-		.excelcontainer{
-			margin-top: -40px;
-			width:95%;
-			padding:20px;
-		}
-		
-		body {
-		background-color: #FFFFFF;
-		font-family: 'Arial', sans-serif;
-		}
-		
-		.homepage_button {
-				display: inline-block;
-				padding: 10px 20px;
-				background-color: #505050;
-				color: white;
-				text-decoration: none;
-				border-radius: 5px;
-				font-size: 16px;
-				transition: border 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-			}
-		.homepage_button:hover {
-				border: 2px solid red; /* Adds a red border on hover */
-				box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); /* Adds a shadow effect */
-				background-color: #505050; /* Maintain original background color */
-			}
-		.tableauPlaceholder{
-			position: absolute;
-			top: 60px;
-			}
-		.excelphoto{
-			width: 1000px;
-			}
-	</style>
-	
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Credit Card Spending Analysis</title>
+  <style>
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      line-height: 1.5;
+    }
 
+    /* Header with title & Home button */
+    header {
+      position: relative;
+      background: #1c1c1c;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+    .homepage-button {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      padding: 0.5rem 1rem;
+      background: #fff;
+      color: #1c1c1c;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .homepage-button:hover {
+      background: #e0e0e0;
+      transform: translateY(-2px);
+    }
+
+    /* Main wrapper */
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 2rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+    }
+    section h2 {
+      font-size: 1.75rem;
+      margin-bottom: 0.75rem;
+    }
+    section p,
+    section ul {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+    }
+    section ul {
+      list-style: disc inside;
+    }
+
+    /* Tableau “card” */
+    .viz-card {
+      overflow: hidden;
+		height: 600px;
+    }
+    .viz-card .tableauPlaceholder,
+    .viz-card object {
+      width: 100% !important;
+      height: 90% !important;
+      display: block;
+      border-radius: 6px;
+    }
+  </style>
+</head>
 <body>
-	<div class="toptextcontainer">
-    	<a href="HomePage.html" class="homepage_button">Home Page</a>
-    		<h1>Credit Card Spending Analysis - Tableau + Excel Dashboard</h1>
-    			<h3>This project analyzes 261 transactions totaling $7,987.22 in credit card spending throughout 2023. 
-        			<br>The objective was to understand spending habits and trends to optimize budgeting strategies.
-    			</h3>
-	</div>
-	
-	<div class="lowertextcontainer">
-        Top Spending Categories:
-        <ul>
-            <li>Online Shopping (30% of total spending)</li>
-            <li>Entertainment (21%)</li>
-            <li>Food Delivery (16%)</li>
-        </ul>
-		 Spending Trends:
-        <ul>
-            <li>Monthly spending remained relatively consistent, with peaks in online shopping and food delivery categories during the summer months.</li>
-        </ul>
-		Credit Utilization:
-        <ul>
-            <li>The average credit utilization rate was 19.02%, reflecting a healthy credit usage relative to the card's limit.</li>
-        </ul>
-		Reccomendations:
-        <ul>
-            <li>Reduce Online Shopping: Accounts for 30% of expenses (Implement a budget to stay consistent)</li>
-            <li>Reduce Food Deliveries: Transitioning from food delivery to home-cooked meals could significantly reduce expenses.</li>
-            <li>Monitor Credit Utilization: Utilization below 20% is good, but reducing it to below 10% would be optimal to improve credit score</li>
-        </ul>
-	</div>
-		
-	<div class="tableautextcontainer">
-		<h3>Tableau Dashboard (Interactive)</h3>
-	</div>
-		
-	<div class="tableaucontainer">
-		<div class='tableauPlaceholder' id='viz1733010738778' style='position: relative'><noscript><a href='#'><img alt='CC Spending Analysis Dashboard ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Cr&#47;CreditCardSpendingDashboardFR&#47;CCSpendingAnalysisDashboard&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='CreditCardSpendingDashboardFR&#47;CCSpendingAnalysisDashboard' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Cr&#47;CreditCardSpendingDashboardFR&#47;CCSpendingAnalysisDashboard&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1733010738778');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='927px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-	</div>
-	
-	<div class="exceltextcontainer">
-		<h3>Excel Dashboard</h3>
-	</div>
-	
-	<div class="excelcontainer"> 
-		<img src= "CreditCardDashboard_Excel.jpeg" class ="excelphoto">
-	</div>
-	
+
+  <!-- Header -->
+  <header>
+    <a href="HomePage.html" class="homepage-button">Home Page</a>
+    <h1>Credit Card Spending Analysis</h1>
+    <p>
+      This project analyzes 261 transactions totaling $7,987.22 in 2023 credit card spending.
+      The goal is to surface spending habits and trends to optimize budgeting strategies.
+    </p>
+  </header>
+
+  <!-- Main content -->
+  <main>
+
+    <!-- Interactive Tableau Dashboard -->
+    <section class="viz-card">
+      <h2>Interactive Tableau Dashboard</h2>
+      <div id="viz1733010738778" class="tableauPlaceholder" style="position: relative;">
+        <noscript>
+          <a href="#">
+            <img
+              alt="CC Spending Analysis Dashboard"
+              src="https://public.tableau.com/static/images/Cr/CreditCardSpendingDashboardFR/CCSpendingAnalysisDashboard/1_rss.png"
+              style="border:none; display:block; width:100%; height:auto;"
+            />
+          </a>
+        </noscript>
+        <object class="tableauViz" style="display:none;">
+          <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+          <param name="embed_code_version" value="3" />
+          <param name="site_root" value="" />
+          <param name="name" value="CreditCardSpendingDashboardFR/CCSpendingAnalysisDashboard" />
+          <param name="tabs" value="no" />
+          <param name="toolbar" value="yes" />
+          <param name="static_image"
+                 value="https://public.tableau.com/static/images/Cr/CreditCardSpendingDashboardFR/CCSpendingAnalysisDashboard/1.png" />
+          <param name="animate_transition" value="yes" />
+          <param name="display_static_image" value="yes" />
+          <param name="display_spinner" value="yes" />
+          <param name="display_overlay" value="yes" />
+          <param name="display_count" value="yes" />
+          <param name="language" value="en-US" />
+          <param name="filter" value="publish=yes" />
+        </object>
+      </div>
+      <script type="text/javascript">
+        const divEl = document.getElementById('viz1733010738778');
+        const vizEl = divEl.getElementsByTagName('object')[0];
+        const w = divEl.offsetWidth;
+        vizEl.style.width  = '100%';
+        vizEl.style.height = Math.round(w * 0.75) + 'px';
+        const scriptEl = document.createElement('script');
+        scriptEl.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizEl.parentNode.insertBefore(scriptEl, vizEl);
+      </script>
+    </section>
+
+    <!-- Key Insights & Recommendations -->
+    <section>
+      <h2>Key Insights</h2>
+      <ul>
+        <li><strong>Top Categories:</strong> Online Shopping (30%), Entertainment (21%), Food Delivery (16%)</li>
+        <li><strong>Spending Trends:</strong> Consistent monthly spend with peaks in shopping and entertainment during colder months </li>
+        <li><strong>Credit Utilization:</strong> Avg. 19.02% is healthy, but reducing below 10% would boost scores even further</li>
+      </ul>
+      <h2>Recommendations</h2>
+      <ul>
+        <li>Cap online shopping with a fixed monthly budget</li>
+		<li>Explore more budget-friendly activities to enjoy during the colder months</li>
+        <li>Swap food delivery for home cooking to cut costs</li>
+        <li>Aim for under 10% utilization to maximize credit score</li>
+      </ul>
+    </section>
+
+  </main>
+
 </body>
-	
-	
 </html>
