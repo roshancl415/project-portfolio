@@ -1,131 +1,100 @@
 <!doctype html>
-<html>
-	<meta charset="UTF-8">	
-	<title>SQL Database</title>
-	
-	
-	<style>
-		.toptextcontainer{
-			width:85%;
-			padding:20px;
-		}
-		.toptextcontainer h1{
-			margin-top: 50px;
-		}
-		
-		body {
-		background-color: #FFFFFF;
-		font-family: 'Arial', sans-serif;
-		}
-		
-		.homepage_button {
-				display: inline-block;
-				padding: 10px 20px;
-				background-color: #505050;
-				color: white;
-				text-decoration: none;
-				border-radius: 5px;
-				font-size: 16px;
-				transition: border 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-		}
-		.homepage_button:hover {
-				border: 2px solid red; /* Adds a red border on hover */
-				box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); /* Adds a shadow effect */
-				background-color: #505050; /* Maintain original background color */
-		}
-		body, html {
-			margin: 0;
-			padding: 0;
-			height: 100%;
-			width: 100%;
-		}
-		.erdtitle-container{
-			width: 85%;
-			height: 0; /* Set to viewport height */
-			margin-bottom: -15px;
-			padding: 20px;
-			border: none;
-		}
-		.erdtitle-container h3 {
-			font-size: 22px;
-		}
-		}
-		.erd-container {
-			width: 85%;
-			height: auto;
-/*			margin-top: 10px;*/
-			overflow: hidden;
-		}
-		.iframecontainer{
-			top: 900px;
-			width: 95%;
-			height: 100vh;
-			padding: 20px;
-			border: none;
-			
-		}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SQL Server Database for Chase Center Stadium</title>
+  <style>
+    /* ------------------------------------------------------------------
+       Reset & base styles
+    ------------------------------------------------------------------ */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      line-height: 1.5;
+    }
 
-		.erd-container img {
-			width: 85%;
-			height: auto;
-			display: block;
-			padding: 20px;
-			margin-top: 50px;
-		}
-		.iframe-container2 {
-			width: 85%;
-			height: 100vh; /* Set to viewport height */
-			margin-top: 10px;
-			overflow: auto;
-			display: block;
-			justify-content: center;
-			align-items: center;
-			padding: 20px;
-			border: none;
-		}
-		.sqlcode-container{
-			width: 85%;
-			height: 0; /* Set to viewport height */
-			margin-bottom: 15px;
-			padding: 20px;
-			border: none;
-		}
-		.sqlcode-container h3 {
-			font-size: 22px;
-		}
-	</style>
-	
+    /* ------------------------------------------------------------------
+       Header bar with title, description & Home button
+    ------------------------------------------------------------------ */
+    header {
+      position: relative;            /* allows absolute positioning inside */
+      background: #1c1c1c;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+    .homepage-button {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      padding: 0.5rem 1rem;
+      background: #fff;
+      color: #1c1c1c;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .homepage-button:hover {
+      background: #e0e0e0;
+      transform: translateY(-2px);
+    }
 
+    /* ------------------------------------------------------------------
+       Main content wrapper
+    ------------------------------------------------------------------ */
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    /* ------------------------------------------------------------------
+       IFrame container styled as a “card”
+    ------------------------------------------------------------------ */
+    .iframe-container {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      overflow: hidden;
+      padding: 1rem;
+    }
+    .iframe-container iframe {
+      width: 100%;
+      height: 80vh;
+      border: none;
+    }
+  </style>
+</head>
 <body>
-	<div class="toptextcontainer">
-		<a href="HomePage.html" class="homepage_button">Home Page</a>
-<!--
-			<h1>SQL Server Database for Chase Center Stadium</h1>
-				<h3>The company that this database is designed for is GSW Arena, LLC. This company owns the Golden State Warriors Stadium known as 		“Chase Center” in San Francisco, California. This stadium operates year-round primarily acting as a home stadium for the Golden 	State Warriors basketball team. The purpose of creating this database is to ensure that GSW Arena LLC can easily access data 	  relevant to analyzing, maintaining, and improving their overall stadium operations to ensure that maximum profit is being achieved.
-				</h3>
-	</div>
--->
-	
-<!--
-	<div class="erdtitle-container"><br>
-		<h3>Chase Center Database ERD Diagram</h3>
-	</div>
--->
-	
-<!--
-	<div class="erd-container">
-		<img src="ChaseCenter_ERD.jpeg">
--->
-<!--
-	<div class="sqlcode-container">
-		<h3>SQL Code to Create Database, Views, Functions, and Stored Procedures</h3>	
--->
-<!--	</div>-->
-<!--	</div>-->
-		<iframe src="WorldFitness.html" class="iframecontainer" scrolling="yes"></iframe>
 
-	
+  <header>
+    <a href="HomePage.html" class="homepage-button">Home Page</a>
+    <h1>SQL Server Database for Chase Center Stadium</h1>
+    <p>
+      This database was designed for GSW Arena, LLC—the owners of the Chase Center—
+      to manage and analyze stadium operations.  It includes tables for events,
+      ticket sales, concessions, and staffing to help maximize profitability.
+    </p>
+  </header>
+
+  <main>
+    <div class="iframe-container">
+      <iframe src="WorldFitness.html" scrolling="yes"></iframe>
+    </div>
+  </main>
+
 </body>
-	
-	
 </html>
