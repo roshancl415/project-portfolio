@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Roshan's Portfolio</title>
+
+    <style>
+      /* ------------------------------------------------------------------
+         Base Styles
+         ------------------------------------------------------------------ */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #FFFFFF;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* ------------------------------------------------------------------
+         Top Bar Background
+         ------------------------------------------------------------------ */
+      .topleft_rectangle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 90px;
+        background-color: #1C1C1C;
+        z-index: 0;
+      }
+
+      /* ------------------------------------------------------------------
+         Site Header (Name + LinkedIn Icon)
+         ------------------------------------------------------------------ */
+      .site-header {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+        height: 90px;
+        box-sizing: border-box;
+      }
+
+      .site-header h1 {
+        color: white;
+        margin: 0;
+        font-size: 1.5rem;
+      }
+
+      .linkedin {
+        width: 40px;
+        height: 40px;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .linkedin:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      }
+
+      /* ------------------------------------------------------------------
+         Projects Grid Container
+         ------------------------------------------------------------------ */
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+        max-width: 1200px;
+        margin: 50px auto 2rem;
+        padding: 0 1rem;
+        box-sizing: border-box;
+      }
+
+      /* ------------------------------------------------------------------
+         Individual Project Card
+         ------------------------------------------------------------------ */
+      .project-card {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        overflow: hidden;
+        text-align: center;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .project-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      }
+
+      /* Thumbnail Image */
+      .project-card img {
+        width: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* Project Title */
+      .project-card h4 {
+        margin: 0.75rem 0 0.5rem;
+        font-size: 1rem;
+        color: #333;
+        padding: 0 0.5rem;
+      }
+
+      /* View Project Button */
+      .project-card .button {
+        display: inline-block;
+        margin: 0.5rem 0 1rem;
+        padding: 0.4rem 1rem;
+        background: #505050;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background 0.2s, box-shadow 0.2s;
+      }
+      .project-card .button:hover {
+        background: #333;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      }
+
+      /* ------------------------------------------------------------------
+         Website Source Code Button
+         ------------------------------------------------------------------ */
+      .homepage_button {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        z-index: 100;
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background: #505050;
+        color: #fff;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 6px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+      }
+      .homepage_button:hover {
+        background: #333;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+        transform: translateY(-2px);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Top Bar Background -->
+    <div class="topleft_rectangle"></div>
+
+    <!-- Site Header: Name and LinkedIn Link -->
+    <header class="site-header">
+      <h1>Roshan Cranford Luitel</h1>
+      <a href="https://www.linkedin.com/in/roshancranfordluitel/">
+        <img
+          class="linkedin"
+          src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+          alt="LinkedIn"
+        />
+      </a>
+    </header>
+
+    <!-- Projects Grid -->
+    <section class="projects">
+		
+      <!-- Project Cards: -->
+      <div class="project-card">
+        <img src="WorldFitnessLogo.jpeg" alt="WorldFitness Gym Database" />
+        <h4>WorldFitness Gym Database</h4>
+        <a href="SQLServer-Database.html" class="button">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <img
+          src="https://mrhsnews.com/wp-content/uploads/2023/10/DSb9bCBnrhYxQwgQezU3KdPtGZe34KkLpGqLcZWX-1.png"
+          alt="Optimal Fantasy Football Lineup"
+        />
+        <h4>Optimal Fantasy Football Lineup</h4>
+        <a href="optimal-fantasy.html" class="button">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <img
+          src="https://cdn.britannica.com/54/237654-050-9DD5E536/Macro-image-of-all-major-credit-card-companies.jpg"
+          alt="Credit Card Spending Analysis"
+        />
+        <h4>Credit Card Spending Analysis</h4>
+        <a href="CC-Spending-Dashboard.html" class="button">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <img src="LukaRef.jpeg" alt="NBA Referee Foul Tendencies" />
+        <h4>NBA Referee Foul Tendencies</h4>
+        <a href="nba-referee-tendancies.html" class="button">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <img
+          src="https://media.cnn.com/api/v1/images/stellar/prod/130214161738-01-michael-jordan.jpg?q=w_3072,h_1728,x_0,y_0,c_fill"
+          alt="NBA Win Prediction Model"
+        />
+        <h4>NBA Win Prediction Model</h4>
+        <a href="DataMining-WinPrediction.html" class="button">View Project</a>
+      </div>
+    </section>
+
+    <!-- Fixed Link to Source Code -->
+    <a
+      href="https://github.com/roshancl415/project-portfolio"
+      class="homepage_button"
+      >Website Source Code</a
+    >
+  </body>
+</html>
