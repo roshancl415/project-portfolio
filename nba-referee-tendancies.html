@@ -1,70 +1,144 @@
 <!doctype html>
-<html>
-	<meta charset="UTF-8">	
-	<title>NBA Referee Foul Tendancies</title>
-	
-	
-	<style>
-		.toptextcontainer{
-			width: 95%;
-			padding: 20px;
-		}
-		.toptextcontainer h1{
-			margin-top: 50px;
-		}
-		.homepage_button {
-				display: inline-block;
-				padding: 10px 20px;
-				background-color: #505050;
-				color: white;
-				text-decoration: none;
-				border-radius: 5px;
-				font-size: 16px;
-				transition: border 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-			}
-		.homepage_button:hover {
-				border: 2px solid red; /* Adds a red border on hover */
-				box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); /* Adds a shadow effect */
-				background-color: #505050; /* Maintain original background color */
-			}
-		body {
-		background-color: #FFFFFF;
-		font-family: 'Arial', sans-serif;
-		}
-		.iframecontainer{
-			width: 95%;
-			height: 100vh;
-			padding: 20px;
-			border: none;
-			
-		}
-		.tableaucontainer{
-			margin-top: -30px;
-			width:95%;
-			padding:20px;
-		}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NBA Referee Foul Tendencies</title>
 
-	</style>
-	
+  <style>
+    /* reset & base */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    /* header bar */
+    header {
+      position: relative;           
+      background: #1c1c1c;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto;
+      color: #ccc;
+    }
+
+    /* Home button inside header */
+    .homepage-button {
+      position: absolute;           
+      top: 1rem;                   
+      left: 1rem;                   
+      padding: 0.5rem 1rem;
+      background: #fff;              
+      color: #1c1c1c;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .homepage-button:hover {
+      background: #e0e0e0;
+      transform: translateY(-2px);
+    }
+
+    /* main content wrapper */
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    /* viz “card” */
+    .tableau-container {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .tableau-container .tableauPlaceholder {
+      width: 100% !important;
+      height: auto  !important;
+    }
+  </style>
+</head>
 
 <body>
-	<div class="toptextcontainer">
-		<a href="HomePage.html" class="homepage_button">Home Page</a>
-			<h1>NBA Referee Foul Tendencies</h1>
-				<h3>For this project, I participated in the Makeover Monday challenge to create an <br>
-					effective visualization that showcases different NBA referee foul calling tendancies.<br>  				
-		</h3>
-	</div>
-	
-	<div class= tableaucontainer>
-		<div class='tableauPlaceholder' id='viz1744605265804' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;RefereeFouls&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='RefereeFouls&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;RefereeFouls&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1744605265804');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-	
-	
-	
-	</div>
-	
-	
+  <header>
+    <!-- the header -->
+    <a href="HomePage.html" class="homepage-button">Home Page</a>
+
+    <h1>NBA Referee Foul Tendencies</h1>
+    <p>
+      For this project, I participated in the Makeover Monday challenge to create an
+      effective visualization that showcases different NBA referee foul calling tendencies.
+    </p>
+  </header>
+
+  <main>
+    <div class="tableau-container">
+      <div class="tableauPlaceholder" id="viz1744605265804" style="position: relative;">
+        <noscript>
+          <a href="#">
+            <img alt="Dashboard 1"
+                 src="https://public.tableau.com/static/images/Re/RefereeFouls/Dashboard1/1_rss.png"
+                 style="border:none;display:block;width:100%;" />
+          </a>
+        </noscript>
+        <object class="tableauViz" style="display:none;">
+          <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+          <param name="embed_code_version" value="3" />
+          <param name="site_root" value="" />
+          <param name="name" value="RefereeFouls/Dashboard1" />
+          <param name="tabs" value="no" />
+          <param name="toolbar" value="yes" />
+          <param name="static_image"
+                 value="https://public.tableau.com/static/images/Re/RefereeFouls/Dashboard1/1.png" />
+          <param name="animate_transition" value="yes" />
+          <param name="display_static_image" value="yes" />
+          <param name="display_spinner" value="yes" />
+          <param name="display_overlay" value="yes" />
+          <param name="display_count" value="yes" />
+          <param name="language" value="en-US" />
+        </object>
+      </div>
+    </div>
+  </main>
+
+  <!-- Tableau embed script -->
+  <script type="text/javascript">
+    var divElement = document.getElementById('viz1744605265804');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+    if (divElement.offsetWidth > 800) {
+      vizElement.style.minWidth = '420px';
+      vizElement.style.maxWidth = '650px';
+      vizElement.style.width    = '100%';
+      vizElement.style.minHeight= '587px';
+      vizElement.style.maxHeight= '887px';
+      vizElement.style.height   = (divElement.offsetWidth * 0.75) + 'px';
+    } else if (divElement.offsetWidth > 500) {
+      vizElement.style.minWidth = '420px';
+      vizElement.style.maxWidth = '650px';
+      vizElement.style.width    = '100%';
+      vizElement.style.minHeight= '587px';
+      vizElement.style.maxHeight= '887px';
+      vizElement.style.height   = (divElement.offsetWidth * 0.75) + 'px';
+    } else {
+      vizElement.style.width  = '100%';
+      vizElement.style.height = '727px';
+    }
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  </script>
 </body>
-	
-	
 </html>
